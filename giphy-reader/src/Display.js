@@ -3,7 +3,7 @@ import Gif from './Gif';
 import './Display.css';
 
 export default function Display(props){
-    console.log(props.example.data);
+    // console.log(props.example.data);
 
 
 return (    

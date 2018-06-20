@@ -12,19 +12,29 @@ class App extends Component {
       Rating: 'rating',
       Limit: 'limit',
       Language: 'language',
-      Offset: 'page'
+      Offset: 'page',
+      searchTerm: ''
     };
   }
 
-  setRating(Rating){
-    console.log(Rating);
-    this.setState({Rating});
+  setFilter(Filter){
+    //console.log(Rating.name, Rating.value);
+    this.setState({[Filter.name]: Filter.value});
   }
+
+  setSearchTerm(searchTerm){
+    this.setState({searchTerm});
+  }
+
+  submitSearch(){
+    console.log(this.state);
+  }
+
   render() {    
     return (
       <div className="mainContainer">    
-        <Search />  
-        <FilterNav Rating={(Rating) => this.setRating(Rating)}/>
+        <Search value={this.state.searchTerm} submitSearch={()=>this.submitSearch()} setSearchTerm={searchTerm => this.setSearchTerm(searchTerm)}/>  
+        <FilterNav changeFilter={(Filter) => this.setFilter(Filter)}/>
         <Display example={example}/>
       </div>
     );
