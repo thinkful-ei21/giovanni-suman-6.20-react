@@ -1,7 +1,17 @@
-.gif{
-  border: 1px solid black;
-  width: 400px;
+.gif{  
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  
 }
-.gif label{
- border: 1px solid red; 
+.gif label{ 
+ display: block;
+ text-align: center;
+ padding: 10px;
+ font-weight: bold;
+}
+
+.gif img{
+  display: block;
+  margin: auto;
 }
