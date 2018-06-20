@@ -8,11 +8,9 @@ class App extends Component {
     this.state = {};
   }
 
-  render() {
-    console.log(example)
-    return (
-      
-      <Gif />
+  render() {    
+    return (      
+      <Gif example={example}/>
     );
   }
 }
