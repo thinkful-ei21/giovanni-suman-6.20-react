@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Gif from './Gif'
+import Display from './Display'
 import example from './example.json';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
 
   render() {    
     return (      
-      <Gif example={example}/>
+      <Display example={example}/>
     );
   }
 }
