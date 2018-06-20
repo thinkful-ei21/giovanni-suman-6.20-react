@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Display from './Display'
 import example from './example.json';
+import FilterNav from './FilterNav';
 
 class App extends Component {
   constructor(){
@@ -9,8 +10,11 @@ class App extends Component {
   }
 
   render() {    
-    return (      
-      <Display example={example}/>
+    return (
+      <div>      
+        <FilterNav />
+        <Display example={example}/>
+      </div>
     );
   }
 }
