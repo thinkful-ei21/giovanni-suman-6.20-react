@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './filter.css';
 
 
 export default function FilterNav(props){
