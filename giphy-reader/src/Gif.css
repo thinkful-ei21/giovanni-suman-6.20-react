@@ -1,0 +1,7 @@
+.gif{
+  border: 1px solid black;
+  width: 400px;
+}
+.gif label{
+ border: 1px solid red; 
+}
