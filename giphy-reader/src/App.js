@@ -8,14 +8,23 @@ import './App.css';
 class App extends Component {
   constructor(){
     super();
-    this.state = {};
+    this.state = {
+      Rating: 'rating',
+      Limit: 'limit',
+      Language: 'language',
+      Offset: 'page'
+    };
   }
 
+  setRating(Rating){
+    console.log(Rating);
+    this.setState({Rating});
+  }
   render() {    
     return (
       <div className="mainContainer">    
         <Search />  
-        <FilterNav />
+        <FilterNav Rating={(Rating) => this.setRating(Rating)}/>
         <Display example={example}/>
       </div>
     );
