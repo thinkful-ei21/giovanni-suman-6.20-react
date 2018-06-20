@@ -25,9 +25,15 @@ class App extends Component {
   setSearchTerm(searchTerm){
     this.setState({searchTerm});
   }
-
+  
   submitSearch(){
-    console.log(this.state);
+  //  console.log(this.state);
+    fetch(`https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=test&limit=25&offset=0&rating=G&lang=en`, {
+    //  headers: {'api_key':'v3ZRvAHR399FBYpBma1qB6aE8ALK5nDn', 'Content-Type': 'application/json'},
+      method:"GET"
+    //  referrer: 'no-referrer'
+    })
+      .then(console.log)
   }
 
   render() {    
